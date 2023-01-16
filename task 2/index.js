@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', function (event) {
     fetch('https://api.nasa.gov/planetary/apod?api_key=jg4kSp5vTeI5dPMsPdSBYzn7g0hIVocOuXl5cQt7')
         .then(response => response.json())
         .then(data => {
@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', function (e) {
             const info = document.querySelector('.info');
             info.innerHTML = data.explanation;
         })
-        .catch(err => console.log(err));
+        .catch(error => console.log(error));
 })
